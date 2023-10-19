@@ -1,0 +1,18 @@
+Partido  -l-> Encuentro: Se desarrolla en un >
+Encuentro *-d- Períodos : Consta de uno o varios >
+
+Partido *-- Reglas : Sigue varias >
+
+Partido <-- Alineación  : Disputa <
+Partido <--- Arbitro  : Dirige <
+
+Equipo -u-> Alineación : Presenta >
+
+Jugador -r-* Equipo : Pertenece >
+
+Persona <|-- Arbitro
+Persona <|-- Jugador
+
+
+Arbitro ... Reglas : Valida el cumplimiento de >
+Jugador ... Reglas : Debe respetar >

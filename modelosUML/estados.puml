@@ -1,0 +1,21 @@
+State Encuentro {
+    [*] -d-> Inicio
+
+    State reloj <<choice>>
+    State Inicio
+    State PeríodoIntermedio
+
+    State Período {
+        Saque -d-> EnJuego
+        EnJuego -r-> Detenido
+        Detenido -u-> Saque
+    }
+
+    Inicio -d-> Período
+
+    Período-r-> reloj : Se acabó el tiempo
+    reloj -u-> PeríodoIntermedio : Quedan períodos
+    reloj -r-> [*] : No quedan períodos
+
+    PeríodoIntermedio -l-> Inicio
+}

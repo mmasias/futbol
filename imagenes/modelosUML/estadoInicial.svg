@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="635px" preserveAspectRatio="none" style="width:723px;height:635px;background:#FFFFFF;" version="1.1" viewBox="0 0 723 635" width="723px" zoomAndPan="magnify"><defs/><g><g id="elem_arbitro"><rect fill="#F1F1F1" height="50.1358" style="stroke:#181818;stroke-width:0.5;" width="153" x="137.5" y="227.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="161.5" y="244.4659">arbitro : Arbitro</text><line style="stroke:#181818;stroke-width:0.5;" x1="138.5" x2="289.5" y1="250.5679" y2="250.5679"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="143.5" y="269.5339">rol = "Primer árbitro"</text></g><g id="elem_arbitro2"><rect fill="#F1F1F1" height="50.1358" style="stroke:#181818;stroke-width:0.5;" width="144" x="142" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="157.5" y="23.9659">arbitro2 : Arbitro</text><line style="stroke:#181818;stroke-width:0.5;" x1="143" x2="285" y1="30.0679" y2="30.0679"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="148" y="49.0339">rol = "juez de línea"</text></g><g id="elem_arbitro3"><rect fill="#F1F1F1" height="50.1358" style="stroke:#181818;stroke-width:0.5;" width="144" x="142" y="448"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="157.5" y="464.9659">arbitro3 : Arbitro</text><line style="stroke:#181818;stroke-width:0.5;" x1="143" x2="285" y1="471.0679" y2="471.0679"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="148" y="490.0339">rol = "juez de línea"</text></g><g id="elem_partido"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="123" x="375.5" y="233"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="382.5" y="249.9659">partido : Partido</text><line style="stroke:#181818;stroke-width:0.5;" x1="376.5" x2="497.5" y1="256.0679" y2="256.0679"/></g><g id="elem_equipoMadrid"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="155" x="354.5" y="348"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="361.5" y="364.9659">Real Madrid : Equipo</text><line style="stroke:#181818;stroke-width:0.5;" x1="355.5" x2="508.5" y1="371.0679" y2="371.0679"/></g><g id="elem_equipoBarcelona"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="140" x="367" y="118"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="374" y="134.9659">Barcelona : Equipo</text><line style="stroke:#181818;stroke-width:0.5;" x1="368" x2="506" y1="141.0679" y2="141.0679"/></g><g id="elem_alineacionMadrid"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="214" x="325" y="453.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="332" y="470.4659">alineacionMadrid : Alineacion</text><line style="stroke:#181818;stroke-width:0.5;" x1="326" x2="538" y1="476.5679" y2="476.5679"/></g><g id="elem_alineacionBarcelona"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="232" x="321" y="12.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="218" x="328" y="29.4659">alineacionBarcelona : Alineacion</text><line style="stroke:#181818;stroke-width:0.5;" x1="322" x2="552" y1="35.5679" y2="35.5679"/></g><g id="elem_primerTiempo"><rect fill="#F1F1F1" height="39.0679" style="stroke:#181818;stroke-width:0.5;" width="173" x="544.5" y="348"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="551.5" y="364.9659">primerTiempo : Periodo</text><line style="stroke:#181818;stroke-width:0.5;" x1="545.5" x2="716.5" y1="371.0679" y2="371.0679"/></g><g id="elem_encuentro"><rect fill="#F1F1F1" height="69.2038" style="stroke:#181818;stroke-width:0.5;" width="160" x="543" y="218"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="550" y="234.9659">encuentro: Encuentro</text><line style="stroke:#181818;stroke-width:0.5;" x1="544" x2="702" y1="241.0679" y2="241.0679"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="549" y="260.0339">name = "Clásico"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="549" y="279.1018">fecha = "12/10/2022"</text></g><g id="elem_jugador1"><rect fill="#F1F1F1" height="69.2038" style="stroke:#181818;stroke-width:0.5;" width="166" x="550" y="559"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="572" y="575.9659">jugador1: Jugador</text><line style="stroke:#181818;stroke-width:0.5;" x1="551" x2="715" y1="582.0679" y2="582.0679"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="556" y="601.0339">nombre="Iker Casillas"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="556" y="620.1018">titular = TRUE</text></g><g id="elem_jugador2"><rect fill="#F1F1F1" height="69.2038" style="stroke:#181818;stroke-width:0.5;" width="132" x="7" y="559"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="14" y="575.9659">jugador2 Jugador</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="138" y1="582.0679" y2="582.0679"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103" x="13" y="601.0339">nombre="Raul"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="13" y="620.1018">titular = TRUE</text></g><g id="elem_jugador3"><rect fill="#F1F1F1" height="69.2038" style="stroke:#181818;stroke-width:0.5;" width="166" x="349" y="559"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="373" y="575.9659">jugador3 Jugador</text><line style="stroke:#181818;stroke-width:0.5;" x1="350" x2="514" y1="582.0679" y2="582.0679"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="355" y="601.0339">nombre="Sancochado"</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="355" y="620.1018">titular = FALSE</text></g><g id="elem_nota1"><path d="M174.5,571 L174.5,616.412 L313.5,616.412 L313.5,581 L303.5,571 L174.5,571 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M303.5,571 L303.5,581 L313.5,581 L303.5,571 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89" x="180.5" y="589.897">El encuentro lo</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="180.5" y="607.603">inician 11 jugadores</text></g><!--MD5=[7d1bcec515ff5a06231969ddead49066]
+link arbitro to partido--><g id="link_arbitro_partido"><path codeLine="16" d="M290.74,252.5 C318.34,252.5 349.08,252.5 375.24,252.5 " fill="none" id="arbitro-partido" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#000000" points="318,240.353,308.9549,237.4141,308.9549,243.2919,318,240.353" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="322" y="245.397">Dirige</text></g><!--MD5=[1f587ecf4265fceae30c8546d306a6d1]
+link arbitro2 to arbitro--><g id="link_arbitro2_arbitro"><path codeLine="17" d="M214,57.22 C214,99.22 214,185.1 214,227.17 " fill="none" id="arbitro2-arbitro" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#000000" points="219,142.853,221.9389,133.8079,216.0611,133.8079,219,142.853" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="228" y="142.897">Colabora con</text></g><!--MD5=[8664ec1e1d292713841a5890aa2323a4]
+link arbitro to arbitro3--><g id="link_arbitro_arbitro3"><path codeLine="18" d="M214,277.72 C214,319.72 214,405.6 214,447.67 " fill="none" id="arbitro-arbitro3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#000000" points="219,362.853,216.0611,371.8981,221.9389,371.8981,219,362.853" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="228" y="372.897">Colabora con</text></g><!--MD5=[a5c0bd5b80a9d25105d32a8aa000828e]
+link equipoBarcelona to partido--><g id="link_equipoBarcelona_partido"><path codeLine="26" d="M437,157.16 C437,178.1 437,211.86 437,232.81 " fill="none" id="equipoBarcelona-partido" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b94bc1e739c71096aeacc4deec3dc1c8]
+link partido to equipoMadrid--><g id="link_partido_equipoMadrid"><path codeLine="27" d="M436.17,272.16 C435.25,293.1 433.75,326.86 432.83,347.81 " fill="none" id="partido-equipoMadrid" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[421008a9985e2721c489d756565a553a]
+link partido to encuentro--><g id="link_partido_encuentro"><path codeLine="37" d="M498.76,252.5 C513.48,252.5 528.2,252.5 542.92,252.5 " fill="none" id="partido-encuentro" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8ead2141d579c83a587349d87d83bd3b]
+link encuentro to primerTiempo--><g id="link_encuentro_primerTiempo"><path codeLine="39" d="M625.38,287.1 C626.79,307.01 628.52,331.48 629.69,347.95 " fill="none" id="encuentro-primerTiempo" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[5f753ebc6cf0ed3706af99a77086e1bc]
+link equipoMadrid to alineacionMadrid--><g id="link_equipoMadrid_alineacionMadrid"><path codeLine="56" d="M432,387 C432,405.73 432,434.52 432,453.31 " fill="none" id="equipoMadrid-alineacionMadrid" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e55b54348bf963726fc3dd40762b32b4]
+link alineacionBarcelona to equipoBarcelona--><g id="link_alineacionBarcelona_equipoBarcelona"><path codeLine="57" d="M437,51.5 C437,70.23 437,99.02 437,117.81 " fill="none" id="alineacionBarcelona-equipoBarcelona" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2a930a2d739757ba780ee698fcd39181]
+link alineacionMadrid to jugador1--><g id="link_alineacionMadrid_jugador1"><path codeLine="59" d="M463.41,492.52 C493.44,510.22 539.43,537.33 575.94,558.86 " fill="none" id="alineacionMadrid-jugador1" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[870947357cc35c6cb868acaab90441b9]
+link alineacionMadrid to jugador2--><g id="link_alineacionMadrid_jugador2"><path codeLine="60" d="M366.79,492.56 C310.77,508.89 228.03,533.9 157,559 C151.23,561.04 145.26,563.24 139.3,565.49 " fill="none" id="alineacionMadrid-jugador2" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[dbb52d70f90c6cd3633fc380bf5ca175]
+link alineacionMadrid to jugador3--><g id="link_alineacionMadrid_jugador3"><path codeLine="61" d="M432,492.52 C432,510.22 432,537.33 432,558.86 " fill="none" id="alineacionMadrid-jugador3" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[77e725b001d3e6a79cd0673f83dc7ef4]
+link jugador2 to nota1--><g id="link_jugador2_nota1"><path codeLine="65" d="M139.13,593.5 C150.87,593.5 162.62,593.5 174.36,593.5 " fill="none" id="jugador2-nota1" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[1b7668f84c38156c44eefb69b4af324e]
+link nota1 to jugador3--><g id="link_nota1_jugador3"><path codeLine="66" d="M313.77,593.5 C325.47,593.5 337.17,593.5 348.87,593.5 " fill="none" id="nota1-jugador3" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[2e5e9f0d8a7924ca855f3e65a6532db8]
+@startuml
+
+object "arbitro : Arbitro" as arbitro {
+rol = "Primer árbitro"
+}
+
+object "arbitro2 : Arbitro" as arbitro2 {
+rol = "juez de línea"
+}
+
+object "arbitro3 : Arbitro" as arbitro3 {
+rol = "juez de línea"
+}
+
+object "partido : Partido" as partido
+
+partido -l- - arbitro : "Dirige <" 
+arbitro2 -d- - arbitro : "> Colabora con"
+arbitro3 -u- - arbitro : "> Colabora con"
+
+object "Real Madrid : Equipo" as equipoMadrid
+object "Barcelona : Equipo" as equipoBarcelona
+
+object "alineacionMadrid : Alineacion" as alineacionMadrid
+object "alineacionBarcelona : Alineacion" as alineacionBarcelona
+
+partido -u- equipoBarcelona
+partido -d- equipoMadrid
+
+object "primerTiempo : Periodo" as primerTiempo
+' object "segundoTiempo : Periodo" as segundoTiempo
+
+object "encuentro: Encuentro" as encuentro {
+name = "Clásico"
+fecha = "12/10/2022"
+}
+
+partido -r- encuentro
+
+encuentro - - primerTiempo
+
+object "jugador1: Jugador" as jugador1 {
+nombre="Iker Casillas"
+titular = TRUE
+}
+
+object "jugador2 Jugador" as jugador2 {
+nombre="Raul"
+titular = TRUE
+}
+
+object "jugador3 Jugador" as jugador3 {
+nombre="Sancochado"
+titular = FALSE
+}
+
+equipoMadrid -d- alineacionMadrid
+equipoBarcelona -u- alineacionBarcelona
+
+alineacionMadrid - - jugador1
+alineacionMadrid - - jugador2
+alineacionMadrid - - jugador3
+
+note "El encuentro lo\ninician 11 jugadores" as nota1
+
+jugador2 .r. nota1
+nota1 .r. jugador3
+
+@enduml
+
+@startuml
+
+object "arbitro : Arbitro" as arbitro {
+rol = "Primer árbitro"
+}
+
+object "arbitro2 : Arbitro" as arbitro2 {
+rol = "juez de línea"
+}
+
+object "arbitro3 : Arbitro" as arbitro3 {
+rol = "juez de línea"
+}
+
+object "partido : Partido" as partido
+
+partido -l- - arbitro : "Dirige <" 
+arbitro2 -d- - arbitro : "> Colabora con"
+arbitro3 -u- - arbitro : "> Colabora con"
+
+object "Real Madrid : Equipo" as equipoMadrid
+object "Barcelona : Equipo" as equipoBarcelona
+
+object "alineacionMadrid : Alineacion" as alineacionMadrid
+object "alineacionBarcelona : Alineacion" as alineacionBarcelona
+
+partido -u- equipoBarcelona
+partido -d- equipoMadrid
+
+object "primerTiempo : Periodo" as primerTiempo
+
+object "encuentro: Encuentro" as encuentro {
+name = "Clásico"
+fecha = "12/10/2022"
+}
+
+partido -r- encuentro
+
+encuentro - - primerTiempo
+
+object "jugador1: Jugador" as jugador1 {
+nombre="Iker Casillas"
+titular = TRUE
+}
+
+object "jugador2 Jugador" as jugador2 {
+nombre="Raul"
+titular = TRUE
+}
+
+object "jugador3 Jugador" as jugador3 {
+nombre="Sancochado"
+titular = FALSE
+}
+
+equipoMadrid -d- alineacionMadrid
+equipoBarcelona -u- alineacionBarcelona
+
+alineacionMadrid - - jugador1
+alineacionMadrid - - jugador2
+alineacionMadrid - - jugador3
+
+note "El encuentro lo\ninician 11 jugadores" as nota1
+
+jugador2 .r. nota1
+nota1 .r. jugador3
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: es
+Country: ES
+--></g></svg>
