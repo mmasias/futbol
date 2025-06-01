@@ -1,13 +1,12 @@
-# Modelo del dominio
+# Hilo conductor
 
-|Diagrama de clases|Diagrama de Estados|
-|:-:|:-:|
-|![Modelo del dominio](/imagenes/modelosUML/modeloDelDominio.svg)|![Estados](/imagenes/modelosUML/estados.svg)
-|[Código](/modelosUML/modeloDelDominio.puml)|[Código](/modelosUML/estados.puml)
+|Modelo del dominio|
+|:-:|
+|![](/images/modelosUML/modeloDelDominio.svg)|
 
-|Diagrama de objetos
-|:-:
-|![Imagen](/imagenes/modelosUML/estadoInicial.svg)
-|[Código](/modelosUML/estadoInicial.puml)
+## Diseño
 
-
+|Diseño|
+|:-:|
+|![](/images/modelosUML/diseño.svg)|
+|![](/images/modelosUML/diseñoCompleto.svg)|

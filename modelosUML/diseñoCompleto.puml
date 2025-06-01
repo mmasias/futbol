@@ -1,0 +1,90 @@
+@startuml
+
+abstract class Persona {
+  -nombre: String
+  -dni: String
+  +getNombre(): String
+  +getDni(): String
+}
+
+class Encuentro {
+  -fechaInicio: Date
+  -fechaFin: Date
+  -lugar: String
+  +iniciar(): void
+  +finalizar(): void
+}
+
+class Partido {
+  -fechaHora: DateTime
+  -resultado: String
+  -estado: EstadoPartido
+  +iniciar(): void
+  +finalizar(): void
+  +registrarGol(): void
+}
+
+class Periodos {
+  -numero: int
+  -duracion: int
+  -tiempoExtra: boolean
+  +iniciarPeriodo(): void
+  +finalizarPeriodo(): void
+}
+
+class Arbitro {
+  -licencia: String
+  -categoria: String
+  -experiencia: int
+  +dirigirPartido(): void
+  +mostrarTarjeta(): void
+  +validarJugada(): void
+}
+
+class Jugador {
+  -dorsal: int
+  -posicion: String
+  -activo: boolean
+  +jugar(): void
+  +marcarGol(): void
+  +recibirTarjeta(): void
+}
+
+class Equipo {
+  -nombre: String
+  -entrenador: String
+  -ciudad: String
+  +formarEquipo(): void
+  +realizarCambio(): void
+}
+
+class Alineacion {
+  -formacion: String
+  -fecha: Date
+  +validarAlineacion(): boolean
+  +incluirJugador(): void
+}
+
+class Reglas {
+  -deporte: String
+  -version: String
+  -descripcion: String
+  +aplicarRegla(): boolean
+  +determinarSancion(): String
+}
+
+Partido -l-> Encuentro : "se desarrolla en >"
+Encuentro *-d- Periodos : "consta de uno o varios >"
+Partido *-- Reglas : "sigue varias >"
+Alineacion -u-> Partido : "disputa >"
+Arbitro -u--> Partido : "dirige >"
+Equipo -u-> Alineacion : "presenta >"
+Jugador -r-* Equipo : "pertenece >"
+
+Persona <|-- Arbitro
+Persona <|-- Jugador
+
+Arbitro ..> Reglas : "valida cumplimiento de >"
+Jugador ..> Reglas : "debe respetar >"
+
+@enduml

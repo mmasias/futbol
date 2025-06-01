@@ -1,0 +1,17 @@
+@startuml
+
+Partido -l-> Encuentro : "se desarrolla en >"
+Encuentro *-d- Periodos : "consta de uno o varios >"
+Partido *-- Reglas : "sigue varias >"
+Alineacion -u-> Partido : "disputa >"
+Arbitro -u--> Partido : "dirige >"
+Equipo -u-> Alineacion : "presenta >"
+Jugador -r-* Equipo : "pertenece >"
+
+Persona <|-- Arbitro
+Persona <|-- Jugador
+
+Arbitro ..> Reglas : "valida cumplimiento de >"
+Jugador ..> Reglas : "debe respetar >"
+
+@enduml
