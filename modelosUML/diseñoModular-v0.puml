@@ -1,0 +1,68 @@
+@startuml
+
+package "Entidades base" as entidadesBase {
+  abstract class Persona {
+  }
+
+  class Encuentro {
+  }
+
+  class Partido {
+  }
+}
+
+package "Gestión de Tiempo" {
+  class GestorTiempo {
+  }
+
+  class Periodos {
+  }
+}
+
+package "Gestión de Equipos" {
+  class Equipo {
+  }
+
+  class Jugador extends entidadesBase.Persona {
+  }
+
+  class GestorAlineacion {
+  }
+}
+
+package "Arbitraje" {
+  class Arbitro extends entidadesBase.Persona {
+  }
+
+  class Reglas {
+  }
+}
+
+package "Gestión de Eventos" {
+  class GestorEventos {
+  }
+
+  class Resultado {
+  }
+}
+
+Encuentro --* Partido : "contiene"
+Encuentro *-- GestorTiempo : "gestiona tiempo"
+Partido *--- Equipo
+
+Partido --> GestorEventos : "registra eventos"
+Partido --> Resultado : "produce"
+Partido *-- Reglas : "sigue"
+
+GestorTiempo *-- Periodos : "controla"
+
+Equipo *-- GestorAlineacion : "gestiona formación"
+GestorAlineacion o-- Jugador : "incluye"
+
+Arbitro --> Reglas : "aplica"
+Arbitro --> GestorEventos : "reporta a"
+
+GestorAlineacion ..> Reglas : "valida con"
+Jugador ..> Reglas : "debe cumplir"
+
+@enduml

@@ -1,0 +1,130 @@
+@startuml
+
+package "Entidades base" as entidadesBase {
+  abstract class Persona {
+    -nombre: String
+    -dni: String
+    +getNombre(): String
+    +getDni(): String
+  }
+
+  class Encuentro {
+    -fechaInicio: Date
+    -fechaFin: Date
+    -lugar: String
+    +iniciar(): void
+    +finalizar(): void
+    +obtenerPartidos(): List<Partido>
+  }
+
+  class Partido {
+    -fechaHora: DateTime
+    -estado: EstadoPartido
+    +iniciar(): void
+    +finalizar(): void
+    +obtenerResultado(): Resultado
+  }
+}
+
+package "Gestión de Tiempo" {
+  class GestorTiempo {
+    -tiempoTranscurrido: int
+    -periodoActual: int
+    +iniciarPeriodo(): void
+    +finalizarPeriodo(): void
+    +pausar(): void
+    +reanudar(): void
+  }
+
+  class Periodos {
+    -numero: int
+    -duracion: int
+    -tiempoExtra: boolean
+    +getDuracion(): int
+    +esUltimoPeriodo(): boolean
+  }
+}
+
+package "Gestión de Equipos" {
+  class Equipo {
+    -nombre: String
+    -entrenador: String
+    -ciudad: String
+    +getNombre(): String
+    +validarAlineacion(): boolean
+  }
+
+  class Jugador extends entidadesBase.Persona {
+    -dorsal: int
+    -posicion: String
+    -activo: boolean
+    +estaDisponible(): boolean
+    +cambiarEstado(): void
+  }
+
+  class GestorAlineacion {
+    -jugadoresTitulares: List<Jugador>
+    -jugadoresSuplentes: List<Jugador>
+    -formacion: String
+    +validarFormacion(): boolean
+    +realizarCambio(): void
+    +obtenerJugadoresActivos(): List<Jugador>
+  }
+}
+
+package "Arbitraje" {
+  class Arbitro extends entidadesBase.Persona {
+    -licencia: String
+    -categoria: String
+    +dirigirPartido(): void
+    +aplicarSancion(): void
+    +validarJugada(): boolean
+  }
+
+  class Reglas {
+    -deporte: String
+    -version: String
+    -descripcion: String
+    +esJugadaValida(): boolean
+    +obtenerSancion(): String
+    +aplicarRegla(): void
+  }
+}
+
+package "Gestión de Eventos" {
+  class GestorEventos {
+    -eventos: List<Evento>
+    +registrarEvento(): void
+    +obtenerEventos(): List<Evento>
+  }
+
+  class Resultado {
+    -equipoLocal: String
+    -equipoVisitante: String
+    -golesLocal: int
+    -golesVisitante: int
+    +actualizarMarcador(): void
+    +obtenerGanador(): String
+  }
+}
+
+Encuentro --* Partido 
+Encuentro *-- GestorTiempo : "gestiona tiempo"
+Partido *--- Equipo
+
+Partido --> GestorEventos : "registra eventos"
+Partido --> Resultado : "produce"
+Partido *-- Reglas : "sigue"
+
+GestorTiempo *-- Periodos : "controla"
+
+Equipo *-- GestorAlineacion : "gestiona formación"
+GestorAlineacion o-- Jugador : "incluye"
+
+Arbitro --> Reglas : "aplica"
+Arbitro --> GestorEventos : "reporta a"
+
+GestorAlineacion ..> Reglas : "valida con"
+Jugador ..> Reglas : "debe cumplir"
+
+@enduml

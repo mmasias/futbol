@@ -1,0 +1,118 @@
+@startuml
+
+package "Entidades Base" as entidadesBase {
+  abstract class Persona {
+  }
+
+  class Encuentro {
+  }
+
+  class Partido {
+  }
+}
+
+package "Gestión de Tiempo" {
+  interface IControlTiempo {
+  }
+
+  class GestorTiempo implements IControlTiempo {
+  }
+
+  class Periodos {
+  }
+}
+
+package "Gestión de Equipos" {
+  interface IGestorFormacion {
+  }
+
+  class Equipo {
+  }
+
+  class Jugador extends entidadesBase.Persona {
+  }
+
+  class GestorAlineacion implements IGestorFormacion {
+  }
+}
+
+package "Arbitraje" {
+  interface IValidadorReglas {
+  }
+
+  abstract class ReglasDeportivas implements IValidadorReglas {
+  }
+
+  class ReglasFutbol extends ReglasDeportivas {
+  }
+
+  class ReglasBasket extends ReglasDeportivas {
+  }
+
+  class Arbitro extends entidadesBase.Persona {
+  }
+}
+
+package "Gestión de Eventos" {
+  interface IRegistroEventos {
+  }
+
+  interface ICalculadorEstadisticas {
+  }
+
+  class GestorEventos implements IRegistroEventos {
+  }
+
+  class Resultado {
+  }
+
+  class Estadisticas implements ICalculadorEstadisticas {
+  }
+}
+
+package "Presentación" {
+  abstract class VistaBase {
+  }
+
+  class DashboardVista extends VistaBase {
+  }
+
+  class EncuentroVista extends VistaBase {
+  }
+
+  class PartidoVista extends VistaBase {
+  }
+
+  class EstadisticasVista extends VistaBase {
+  }
+}
+
+entidadesBase.Encuentro *-- entidadesBase.Partido : "contiene"
+entidadesBase.Encuentro --> IControlTiempo : "gestiona tiempo"
+
+entidadesBase.Partido --> IRegistroEventos : "registra eventos"
+entidadesBase.Partido --> Resultado : "produce"
+entidadesBase.Partido --> IValidadorReglas : "sigue reglas"
+entidadesBase.Partido *-- Equipo : "enfrentados"
+
+GestorTiempo *-- Periodos : "controla"
+
+Equipo --> IGestorFormacion : "utiliza"
+GestorAlineacion o-- Jugador : "incluye"
+
+Arbitro --> IValidadorReglas : "aplica"
+Arbitro --> IRegistroEventos : "reporta a"
+
+Estadisticas --> IRegistroEventos : "consulta"
+Estadisticas --> Resultado : "analiza"
+
+GestorAlineacion ..> IValidadorReglas : "valida con"
+Jugador ..> IValidadorReglas : "debe cumplir"
+
+DashboardVista o-- VistaBase : "compone"
+
+EncuentroVista --> entidadesBase.Encuentro : "presenta"
+PartidoVista --> entidadesBase.Partido : "presenta"
+EstadisticasVista --> ICalculadorEstadisticas : "presenta"
+
+@enduml

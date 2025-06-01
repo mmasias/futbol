@@ -1,0 +1,231 @@
+@startuml
+
+package "Entidades Base" as entidadesBase {
+  abstract class Persona {
+    -nombre: String
+    -dni: String
+    +getNombre(): String
+    +getDni(): String
+  }
+
+  class Encuentro {
+    -fechaInicio: Date
+    -fechaFin: Date
+    -lugar: String
+    +iniciar(): void
+    +finalizar(): void
+    +obtenerPartidos(): List<Partido>
+  }
+
+  class Partido {
+    -fechaHora: DateTime
+    -estado: EstadoPartido
+    -reglasPartido: IValidadorReglas
+    +iniciar(): void
+    +finalizar(): void
+    +obtenerResultado(): Resultado
+    +setReglasPartido(reglas: IValidadorReglas): void
+  }
+}
+
+package "Gestión de Tiempo" {
+  interface IControlTiempo {
+    +iniciarPeriodo(): void
+    +finalizarPeriodo(): void
+    +pausar(): void
+    +reanudar(): void
+    +obtenerTiempoTranscurrido(): int
+  }
+
+  class GestorTiempo implements IControlTiempo {
+    -tiempoTranscurrido: int
+    -periodoActual: int
+    +iniciarPeriodo(): void
+    +finalizarPeriodo(): void
+    +pausar(): void
+    +reanudar(): void
+    +obtenerTiempoTranscurrido(): int
+  }
+
+  class Periodos {
+    -numero: int
+    -duracion: int
+    -tiempoExtra: boolean
+    +getDuracion(): int
+    +esUltimoPeriodo(): boolean
+  }
+}
+
+package "Gestión de Equipos" {
+  interface IGestorFormacion {
+    +validarFormacion(): boolean
+    +realizarCambio(jugadorSale: Jugador, jugadorEntra: Jugador): void
+    +obtenerJugadoresActivos(): List<Jugador>
+  }
+
+  class Equipo {
+    -nombre: String
+    -entrenador: String
+    -ciudad: String
+    -gestorFormacion: IGestorFormacion
+    +getNombre(): String
+    +setGestorFormacion(gestor: IGestorFormacion): void
+    +validarAlineacion(): boolean
+  }
+
+  class Jugador extends entidadesBase.Persona {
+    -dorsal: int
+    -posicion: String
+    -activo: boolean
+    +estaDisponible(): boolean
+    +cambiarEstado(): void
+  }
+
+  class GestorAlineacion implements IGestorFormacion {
+    -jugadoresTitulares: List<Jugador>
+    -jugadoresSuplentes: List<Jugador>
+    -formacion: String
+    +validarFormacion(): boolean
+    +realizarCambio(jugadorSale: Jugador, jugadorEntra: Jugador): void
+    +obtenerJugadoresActivos(): List<Jugador>
+  }
+}
+
+package "Arbitraje" {
+  interface IValidadorReglas {
+    +esJugadaValida(jugada: Object): boolean
+    +obtenerSancion(infraccion: Object): String
+    +aplicarRegla(situacion: Object): void
+  }
+
+  abstract class ReglasDeportivas implements IValidadorReglas {
+    #deporte: String
+    #version: String
+    +getDeporte(): String
+    +getVersion(): String
+  }
+
+  class ReglasFutbol extends ReglasDeportivas {
+    +esJugadaValida(jugada: Object): boolean
+    +obtenerSancion(infraccion: Object): String
+    +aplicarRegla(situacion: Object): void
+  }
+
+  class ReglasBasket extends ReglasDeportivas {
+    +esJugadaValida(jugada: Object): boolean
+    +obtenerSancion(infraccion: Object): String
+    +aplicarRegla(situacion: Object): void
+  }
+
+  class Arbitro extends entidadesBase.Persona {
+    -licencia: String
+    -categoria: String
+    -validador: IValidadorReglas
+    +dirigirPartido(): void
+    +aplicarSancion(): void
+    +setValidadorReglas(validador: IValidadorReglas): void
+    +validarJugada(jugada: Object): boolean
+  }
+}
+
+package "Gestión de Eventos" {
+  interface IRegistroEventos {
+    +registrarEvento(evento: Object): void
+    +obtenerEventos(): List<Object>
+  }
+
+  interface ICalculadorEstadisticas {
+    +calcularGolesPromedio(): double
+    +obtenerRankingGoleadores(): List<Jugador>
+    +calcularPorcentajeVictorias(): double
+  }
+
+  class GestorEventos implements IRegistroEventos {
+    -eventos: List<Object>
+    +registrarEvento(evento: Object): void
+    +obtenerEventos(): List<Object>
+  }
+
+  class Resultado {
+    -equipoLocal: String
+    -equipoVisitante: String
+    -golesLocal: int
+    -golesVisitante: int
+    +actualizarMarcador(): void
+    +obtenerGanador(): String
+  }
+
+  class Estadisticas implements ICalculadorEstadisticas {
+    -registroEventos: IRegistroEventos
+    +setRegistroEventos(registro: IRegistroEventos): void
+    +calcularGolesPromedio(): double
+    +obtenerRankingGoleadores(): List<Jugador>
+    +calcularPorcentajeVictorias(): double
+    +obtenerHistorialEquipo(): List<Resultado>
+  }
+}
+
+package "Presentación" {
+  abstract class VistaBase {
+    +actualizar(): void
+    +mostrar(): void
+  }
+
+  class DashboardVista extends VistaBase {
+    -vistas: List<VistaBase>
+    +agregarVista(vista: VistaBase): void
+    +mostrarResumenGeneral(): void
+    +actualizarEnTiempoReal(): void
+  }
+
+  class EncuentroVista extends VistaBase {
+    -encuentro: Encuentro
+    +setEncuentro(encuentro: Encuentro): void
+    +mostrarInfoEncuentro(): void
+    +mostrarCalendario(): void
+  }
+
+  class PartidoVista extends VistaBase {
+    -partido: Partido
+    +setPartido(partido: Partido): void
+    +mostrarEstadoPartido(): void
+    +mostrarMarcador(): void
+  }
+
+  class EstadisticasVista extends VistaBase {
+    -calculador: ICalculadorEstadisticas
+    +setCalculador(calculador: ICalculadorEstadisticas): void
+    +mostrarRankings(): void
+    +mostrarMetricas(): void
+  }
+}
+
+entidadesBase.Encuentro *-- entidadesBase.Partido : "contiene"
+entidadesBase.Encuentro --> IControlTiempo : "gestiona tiempo"
+
+entidadesBase.Partido --> IRegistroEventos : "registra eventos"
+entidadesBase.Partido --> Resultado : "produce"
+entidadesBase.Partido --> IValidadorReglas : "sigue reglas"
+entidadesBase.Partido *-- Equipo : "enfrentados"
+
+GestorTiempo *-- Periodos : "controla"
+
+Equipo --> IGestorFormacion : "utiliza"
+GestorAlineacion o-- Jugador : "incluye"
+
+Arbitro --> IValidadorReglas : "aplica"
+Arbitro --> IRegistroEventos : "reporta a"
+
+Estadisticas --> IRegistroEventos : "consulta"
+Estadisticas --> Resultado : "analiza"
+
+GestorAlineacion ..> IValidadorReglas : "valida con"
+Jugador ..> IValidadorReglas : "debe cumplir"
+
+DashboardVista o-- VistaBase : "compone"
+
+EncuentroVista --> entidadesBase.Encuentro : "presenta"
+PartidoVista --> entidadesBase.Partido : "presenta"
+EstadisticasVista --> ICalculadorEstadisticas : "presenta"
+
+@enduml
