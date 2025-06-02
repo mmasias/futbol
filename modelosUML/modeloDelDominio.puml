@@ -1,5 +1,15 @@
 @startuml
 
+left to right direction
+
+class "las reglas de juego" as Reglas
+class "partido (de futbol)" as Partido
+class "encuentro (de futbol)" as Encuentro
+class "los arbitros" as Arbitro
+class "el equipo" as Equipo
+class "un jugador" as Jugador
+class "otro jugador" as Jugador2
+
 Partido  -r- Encuentro
 Encuentro -u- Períodos
 
@@ -10,6 +20,7 @@ Partido -l- Arbitro
 
 Equipo -- Alineación
 
-Jugador -l- Equipo
+Jugador -- Equipo
+Jugador2 -- Equipo
 
 @enduml
